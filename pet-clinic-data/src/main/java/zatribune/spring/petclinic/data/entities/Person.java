@@ -1,4 +1,4 @@
-package data.entities;
+package zatribune.spring.petclinic.entities;
 
 public class Person {
 
