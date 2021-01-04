@@ -1,6 +1,11 @@
-package zatribune.spring.petclinic.entities;
+package zatribune.spring.petclinic.data.entities;
 
-public class PetType {
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "pet_type")
+public class PetType extends BaseEntity{
 
     private String name;
 

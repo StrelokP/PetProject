@@ -1,12 +1,24 @@
-package zatribune.spring.petclinic.entities;
+package zatribune.spring.petclinic.data.entities;
 
+import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
-public class Pet {
+@Entity
+@Table(name = "pets")
+public class Pet extends BaseEntity{
 
+    @ManyToOne
+    @JoinColumn(name = "pet_type",referencedColumnName = "id")
     private PetType petType;
+    @ManyToOne
+    @JoinColumn(name = "owner",referencedColumnName = "id")
     private Owner owner;
     private LocalDate birthDate;
+    @OneToMany(cascade = CascadeType.ALL,mappedBy = "pet")
+    private Set<Visit>visits=new HashSet<>();
+
 
     public PetType getPetType() {
         return petType;
@@ -30,5 +42,13 @@ public class Pet {
 
     public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
+    }
+
+    public Set<Visit> getVisits() {
+        return visits;
+    }
+
+    public void setVisits(Set<Visit> visits) {
+        this.visits = visits;
     }
 }
