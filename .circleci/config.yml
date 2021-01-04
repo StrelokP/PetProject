@@ -15,8 +15,8 @@ jobs:
             - v1-dependencies-
     - run: mvn dependency:go-offline
     - save_cache:
-        - paths:
+        paths:
         - ~ /.m2
-        - key: v1-dependencies-{{checksum "pom.xml"}}
+        key: v1-dependencies-{{checksum "pom.xml"}}
     #changed from [- run: mvn integration-test] for circleci build issues
     - run: mvn install
