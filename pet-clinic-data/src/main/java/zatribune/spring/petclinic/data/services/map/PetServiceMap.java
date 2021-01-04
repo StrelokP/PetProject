@@ -1,5 +1,6 @@
 package zatribune.spring.petclinic.data.services.map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import zatribune.spring.petclinic.data.entities.Pet;
 import zatribune.spring.petclinic.data.services.CrudService;
@@ -7,6 +8,7 @@ import zatribune.spring.petclinic.data.services.PetService;
 
 import java.util.Set;
 @Service
+@Profile({"default","MapData"})
 public class PetServiceMap extends AbstractMapService<Pet,Long> implements PetService{
     @Override
     public Pet findById(Long id) {
@@ -15,6 +17,7 @@ public class PetServiceMap extends AbstractMapService<Pet,Long> implements PetSe
 
     @Override
     public Pet save(Pet object) {
+        //todo: add validation
         return super.save(object.getId(),object);
     }
 

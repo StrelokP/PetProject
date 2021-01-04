@@ -1,9 +1,12 @@
 package zatribune.spring.petclinic.data.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 
+import javax.persistence.*;
+
+@Data
+@EqualsAndHashCode(callSuper = true)
 @Entity
 public class Person extends BaseEntity{
 
@@ -11,19 +14,4 @@ public class Person extends BaseEntity{
     private String firstName;
     private String lastName;
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
 }

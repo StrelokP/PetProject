@@ -1,19 +1,16 @@
 package zatribune.spring.petclinic.data.entities;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+@Data
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "specialities")
 public class Speciality extends BaseEntity{
     private String description;
 
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }
