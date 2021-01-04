@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>zatribune.spring</groupId>
         <artifactId>pet-clinic</artifactId>
         <version>0.0.2-SNAPSHOT</version>
     </parent>
+    <properties>
+        <!-- to fix pet-clinic-data packages doesn't exist in pet-clinic-web-->
+        <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
+    </properties>
     <modelVersion>4.0.0</modelVersion>
     <packaging>jar</packaging>
     <artifactId>pet-clinic-data</artifactId>
@@ -44,20 +50,10 @@
                     <!--
                     because by default, spring boot will package in a fat executable jar
                     which includes all the dependencies .. but we just need a jar with the
-                    classes in thi module..ow we have just a lean jar.
+                    classes in this module..just to have a lean jar.
                     now, the pet-clinic-web jar will include this jar
                     -->
                 </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                        <configuration>
-                            <skip>true</skip>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>
