@@ -7,7 +7,7 @@ My implementation of the famous Pet-Clinic Spring Boot Web Application.
 </p>
 
 ## Overview  
-This is an ingoing project for a Pet Clinic Web Application built mainly with Spring Boot.
+This is an ongoing project for a Pet Clinic Web Application built mainly with Spring Boot.
  
 ## Built With  
 &nbsp;&nbsp;&nbsp;&nbsp;**Java** - The Main Programming Language and Framework.  
