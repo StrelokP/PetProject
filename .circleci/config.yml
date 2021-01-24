@@ -10,9 +10,9 @@ jobs:
     steps:
     - checkout
     - restore_cache:
-          keys:
-            - v1-dependencies-{{checksum "pom.xml"}}
-            - v1-dependencies-
+        keys:
+          - v1-dependencies-{{checksum "pom.xml"}}
+          - v1-dependencies-
     #this will install the modules to the local maven cache
     #and because this is a multi-module project and one module is
     #dependent on the other so
@@ -25,4 +25,11 @@ jobs:
         - ~/.m2
         key: v1-dependencies-{{checksum "pom.xml"}}
     #changed from [- run: mvn integration-test] for circleci build issues
-    - run: mvn integration-test
+    - run: mvn integration-test cobertura:cobertura
+
+    - store_test_results:
+        path: target/surfire-reports
+
+    - run:
+        name: Send To CodeCov
+        command: bash <(curl -s https://codecov.io/bash)
