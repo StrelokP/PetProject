@@ -1,5 +1,5 @@
 
-# Pet Clinic [![CircleCI](https://circleci.com/gh/ZaTribune/pet-clinic.svg?style=svg)](https://circleci.com/gh/ZaTribune/pet-clinic)
+# Pet Clinic [![CircleCI](https://circleci.com/gh/ZaTribune/pet-clinic.svg?style=svg)](https://circleci.com/gh/ZaTribune/pet-clinic) [![codecov](https://codecov.io/gh/ZaTribune/pet-clinic/branch/master/graph/badge.svg?token=S76X98NXRM)](https://codecov.io/gh/ZaTribune/pet-clinic) 
 My implementation of the famous Pet-Clinic Spring Boot Web Application.
 <p align="center">
   <img src="pet-clinic-web/src/main/resources/static/resources/images/logo.svg" height="300"/>
