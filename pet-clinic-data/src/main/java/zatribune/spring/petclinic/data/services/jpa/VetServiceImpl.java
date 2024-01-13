@@ -33,16 +33,16 @@ public class VetServiceImpl implements VetService {
 
     @Override
     public void delete(Vet object) {
-       vetRepository.delete(object);
+        vetRepository.delete(object);
     }
 
     @Override
     public void deleteById(Long aLong) {
-     vetRepository.deleteById(aLong);
+        vetRepository.deleteById(aLong);
     }
 
     @Override
     public Set<Vet> findAll() {
-        return StreamSupport.stream(vetRepository.findAll().spliterator(),false).collect(Collectors.toSet());
+        return StreamSupport.stream(vetRepository.findAll().spliterator(), false).collect(Collectors.toSet());
     }
 }

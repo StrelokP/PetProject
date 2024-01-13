@@ -33,7 +33,7 @@ public class PetServiceImpl implements PetService {
 
     @Override
     public void delete(Pet object) {
-       petRepository.delete(object);
+        petRepository.delete(object);
     }
 
     @Override
@@ -43,6 +43,6 @@ public class PetServiceImpl implements PetService {
 
     @Override
     public Set<Pet> findAll() {
-        return StreamSupport.stream(petRepository.findAll().spliterator(),false).collect(Collectors.toSet());
+        return StreamSupport.stream(petRepository.findAll().spliterator(), false).collect(Collectors.toSet());
     }
 }

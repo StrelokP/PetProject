@@ -14,15 +14,15 @@ public class OwnersController {
     private final OwnerService ownerService;
 
     @Autowired
-    public OwnersController(OwnerService ownerService){
-        this.ownerService=ownerService;
+    public OwnersController(OwnerService ownerService) {
+        this.ownerService = ownerService;
     }
 
     // don't name the mapping like the returned view -->for testing purposes
     @RequestMapping("ownersList")
-    public String getOwnersPage(Model model){
-        log.debug("I'm in the "+getClass().getSimpleName());
-        model.addAttribute("owners",ownerService.findAll());
+    public String getOwnersPage(Model model) {
+        log.debug("I'm in the " + getClass().getSimpleName());
+        model.addAttribute("owners", ownerService.findAll());
         return "/owners/ownersList";
     }
 }

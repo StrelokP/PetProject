@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "pet_type")
-public class PetType extends BaseEntity{
+public class PetType extends BaseEntity {
 
     private String name;
 

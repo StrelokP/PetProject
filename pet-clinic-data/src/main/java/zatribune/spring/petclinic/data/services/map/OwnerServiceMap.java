@@ -7,9 +7,10 @@ import zatribune.spring.petclinic.data.services.CrudService;
 import zatribune.spring.petclinic.data.services.OwnerService;
 
 import java.util.Set;
+
 @Service
-@Profile({"default","MapData"})
-public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements OwnerService {
+@Profile({"default", "MapData"})
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
     public Owner findById(Long id) {
@@ -19,17 +20,17 @@ public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements O
     @Override
     public Owner save(Owner owner) {
         //todo: add validation
-        return super.save(owner.getId(),owner);
+        return super.save(owner.getId(), owner);
     }
 
     @Override
     public void delete(Owner object) {
-       super.delete(object);
+        super.delete(object);
     }
 
     @Override
     public void deleteById(Long id) {
-       super.deleteById(id);
+        super.deleteById(id);
     }
 
     @Override

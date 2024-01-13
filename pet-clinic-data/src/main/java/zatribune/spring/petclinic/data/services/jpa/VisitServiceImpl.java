@@ -38,11 +38,11 @@ public class VisitServiceImpl implements VisitService {
 
     @Override
     public void deleteById(Long aLong) {
-       visitRepository.deleteById(aLong);
+        visitRepository.deleteById(aLong);
     }
 
     @Override
     public Set<Visit> findAll() {
-        return StreamSupport.stream(visitRepository.findAll().spliterator(),false).collect(Collectors.toSet());
+        return StreamSupport.stream(visitRepository.findAll().spliterator(), false).collect(Collectors.toSet());
     }
 }

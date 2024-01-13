@@ -19,9 +19,9 @@ public class VetsController {
     }
 
     @RequestMapping("/vetsList")
-    public String getVetsPage(Model model){
-        log.debug("I'm in the "+getClass().getSimpleName());
-        model.addAttribute("vets",vetService.findAll());
+    public String getVetsPage(Model model) {
+        log.debug("I'm in the " + getClass().getSimpleName());
+        model.addAttribute("vets", vetService.findAll());
         return "/vets/vetsList";
     }
 }

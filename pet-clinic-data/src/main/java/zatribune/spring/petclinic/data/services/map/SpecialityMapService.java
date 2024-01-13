@@ -6,9 +6,10 @@ import zatribune.spring.petclinic.data.entities.Speciality;
 import zatribune.spring.petclinic.data.services.SpecialityService;
 
 import java.util.Set;
+
 @Service
-@Profile({"default","MapData"})
-public class SpecialityMapService extends AbstractMapService<Speciality,Long> implements SpecialityService {
+@Profile({"default", "MapData"})
+public class SpecialityMapService extends AbstractMapService<Speciality, Long> implements SpecialityService {
     @Override
     public Speciality findById(Long id) {
         return super.findById(id);
@@ -17,7 +18,7 @@ public class SpecialityMapService extends AbstractMapService<Speciality,Long> im
     @Override
     public Speciality save(Speciality object) {
         //todo: add validation
-        return super.save(object.getId(),object);
+        return super.save(object.getId(), object);
     }
 
     @Override

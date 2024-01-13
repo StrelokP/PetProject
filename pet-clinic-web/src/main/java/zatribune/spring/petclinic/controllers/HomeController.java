@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomeController {
 
     @RequestMapping("/home")
-    public String getHome(Model model){
-        log.debug("I'm in the "+getClass().getSimpleName());
+    public String getHome(Model model) {
+        log.debug("I'm in the " + getClass().getSimpleName());
         return "/fragments/home";
     }
 }

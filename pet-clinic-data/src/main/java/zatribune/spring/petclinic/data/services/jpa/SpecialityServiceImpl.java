@@ -34,16 +34,16 @@ public class SpecialityServiceImpl implements SpecialityService {
 
     @Override
     public void delete(Speciality object) {
-       specialityRepository.delete(object);
+        specialityRepository.delete(object);
     }
 
     @Override
     public void deleteById(Long aLong) {
-      specialityRepository.deleteById(aLong);
+        specialityRepository.deleteById(aLong);
     }
 
     @Override
     public Set<Speciality> findAll() {
-        return StreamSupport.stream(specialityRepository.findAll().spliterator(),false).collect(Collectors.toSet());
+        return StreamSupport.stream(specialityRepository.findAll().spliterator(), false).collect(Collectors.toSet());
     }
 }

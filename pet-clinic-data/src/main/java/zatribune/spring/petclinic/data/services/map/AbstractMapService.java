@@ -6,26 +6,27 @@ import java.util.Map;
 import java.util.Set;
 
 // we can make it implement the CrudService<T,ID>
-public abstract class AbstractMapService <T,ID>{
+public abstract class AbstractMapService<T, ID> {
 
-    protected Map<ID,T> map=new HashMap<>();
+    protected Map<ID, T> map = new HashMap<>();
 
-    Set<T> findAll(){
+    Set<T> findAll() {
         return new HashSet<>(map.values());
     }
 
-    T findById(ID id){
+    T findById(ID id) {
         return map.get(id);
     }
 
-    T save(ID id,T object){
-        return map.put(id,object);
+    T save(ID id, T object) {
+        return map.put(id, object);
     }
 
-    void delete(T object){
-        map.entrySet().removeIf(element->element.getValue().equals(object));
+    void delete(T object) {
+        map.entrySet().removeIf(element -> element.getValue().equals(object));
     }
-    void deleteById(ID id){
-       map.remove(id);
+
+    void deleteById(ID id) {
+        map.remove(id);
     }
 }
