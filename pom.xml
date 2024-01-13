@@ -67,6 +67,6 @@
         </plugins>
     </build>
    <scm><developerConnection>https://github.com/StrelokP/PetProject.git</developerConnection>
-       <tag>HEAD</tag><!-- will be displayed on the github tags -->
+       <tag>HEAD</tag>
   </scm>
 </project>
